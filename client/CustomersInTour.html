@@ -1,0 +1,256 @@
+<template name="customerInTour">
+    <a class="btn btn-warning" href="customerInTourSheet?id={{idTour}}">CustomerInTour</a>
+    <!--<a class="btn btn-primary" href="/pdf?id={{idTour}}">downloadPdf</a>-->
+    <button id="downloadPdf" class="btn btn-primary">downloadPdf</button>
+</template>
+<template name="customerInTourSheet">
+    <div class="customer-in-tour-page">
+        <div class="sheet-main-title">{{name}}</div>
+        <div class="tourcode-text">Tourcode: {{tourCode}}</div>
+        <div class="w-row">
+            <div class="w-col w-col-4">
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Tour Price per Pax:</div>
+                    <!--<div>$9000</div>-->
+                    <!--<div>/</div>-->
+                    <!--<div>$10000</div>-->
+                    {{#each tourPrice}}
+                        <div>${{this}}</div>
+                        <div>/</div>
+                    {{/each}}
+                </div>
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Estimated Budget per Pax:</div>
+                    <div>${{estimatedRevenue1.estimatedBudgetPerPax}}</div>
+                </div>
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Personal airfare:</div>
+                    <div>${{estimatedRevenue1.personalAirfare}}</div>
+                </div>
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Total Guide Costing Budget:</div>
+                    <div>${{estimatedRevenue1.totalGuideCostingBudget}}</div>
+                </div>
+            </div>
+            <div class="w-col w-col-3">
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Deposit only customers:</div>
+                    <div>{{depositPeople}}</div>
+                </div>
+                <div class="customer-statistic-wrapper profit">
+                    <div class="customer-in-tour-statistic">Fully Paid Customer:</div>
+                    <div>{{fullPaymentPeople}}</div>
+                </div>
+                <div class="customer-statistic-wrapper ">
+                    <div class="customer-in-tour-statistic">Rufund Customer:</div>
+                    <div>{{refundPeople}}</div>
+                </div>
+            </div>
+            <div class="w-col w-col-2"></div>
+            <div class="w-col w-col-3">
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Estimated Budget:</div>
+                    <div>${{estimatedBudget}}</div>
+                </div>
+                <div class="customer-statistic-wrapper">
+                    <div class="customer-in-tour-statistic">Estimated Revenue:</div>
+                    <div>${{estimatedRevenue}}</div>
+                </div>
+                <div class="customer-statistic-wrapper profit">
+                    <div class="customer-in-tour-statistic">Estimated Profit Margin:</div>
+                    <div>${{estimatedProfit estimatedBudget estimatedRevenue}}</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="basic-inf-row sheet-row">
+            <div class="sheet-row-no">
+                <div>No.</div>
+            </div>
+            <div class="sheet-row-firstname">
+                <div>First Name</div>
+            </div>
+            <div class="sheet-row-lastname">
+                <div>Last Name</div>
+            </div>
+            <div class="sheet-row-phone">
+                <div>Phone</div>
+            </div>
+            <!--<div class="sheet-row-passport">-->
+            <!--<div>Passport No</div>-->
+            <!--</div>-->
+            <div class="sheet-row-email">
+                <div>Email</div>
+            </div>
+            <div class="sheet-row-gender">
+                <div>Gender</div>
+            </div>
+            <!--<div class="sheet-row-nationality">-->
+            <!--<div>Nationality</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-meal">-->
+            <!--<div>Meal</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-room">-->
+            <!--<div>Room</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-request">-->
+            <!--<div>Request</div>-->
+            <!--</div>-->
+            <div class="data-booking-status">
+                <div>Booking Status</div>
+            </div>
+            <div class="data-booking-status">
+                <div>Payment Status</div>
+            </div>
+
+
+            <div class="data-booking-status">
+                <div>Resend Invoice</div>
+            </div>
+            <div class="data-booking-status">
+                <div>Refund</div>
+            </div>
+
+            <!--<div class="sheet-row-no">-->
+            <!--<div>resend</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-no">-->
+            <!--<div>resend invoice deposit</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-firstname">-->
+            <!--<div>resend invoice full payment and trip note</div>-->
+            <!--</div>-->
+
+            <!--<div class="sheet-row-phone">-->
+            <!--<div>refund</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-phone">-->
+            <!--<div>refund deposit</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-phone">-->
+            <!--<div>refund balance payment</div>-->
+            <!--</div>-->
+            <!--<div class="sheet-row-phone">-->
+            <!--<div>cancel customer</div>-->
+            <!--</div>-->
+
+
+        </div>
+
+
+
+        {{#each myCustomers.peopleInTravel}}
+            <div class="sheet-row">
+                <div class="sheet-row-no {{setDark @index}}">
+                    <div>{{sum @index 1}}</div>
+                </div>
+                <div class="sheet-row-firstname">
+                    <div>{{firstName this.idCustomer}}</div>
+                </div>
+                <div class="sheet-row-lastname">
+                    <div>{{lastName this.idCustomer}}</div>
+                </div>
+                <div class="sheet-row-phone">
+                    <div>{{myPhone this.idCustomer}}</div>
+                </div>
+                <!--<div class="sheet-row-passport">-->
+                <!--<div>{{passport this.idCustomer}}</div>-->
+                <!--</div>-->
+
+                <div class="sheet-row-email">
+                    <div>{{email}}</div>
+                </div>
+                <div class="sheet-row-gender">
+                    <div>{{gender this.idCustomer}}</div>
+                </div>
+
+
+                <!--<div class="sheet-row-nationality">-->
+                <!--<div><p>{{nationality this.idCustomer}}</p></div>-->
+                <!--</div>-->
+                <!--<div class="sheet-row-meal">-->
+                <!--<div>{{meal this.idCustomer}}</div>-->
+                <!--</div>-->
+                <!--<div class="sheet-row-room">-->
+                <!--<div>{{this.room}}</div>-->
+                <!--</div>-->
+
+                <!--<div class="sheet-row-request">-->
+                <!--<div>{{request}}</div>-->
+                <!--</div>-->
+                <div class="data-booking-status">
+                    <div>{{this.payment}}</div>
+                    <div class="dropdown-form w-form bookingStatus" id="{{this.idCustomer}}bookingStatus">
+                        <form data-name="Email Form" name="email-form"><select
+                                class="select-field w-select" id="field" name="field">
+                            <option value="NONE">NONE</option>
+                            <option value="DEPOSIT">DEPOSIT</option>
+                            <option value="FULLYPAID">FULLY PAID</option>
+                        </select></form>
+                    </div>
+                </div>
+                <div class="data-booking-status">
+                    <div>{{this.paymentStatus}}</div>
+                    <div class="dropdown-form w-form paymentStatus" id="{{this.idCustomer}}paymentStatus">
+                        <form name="email-form"><select class="select-field w-select"
+                                                        data-name="Field 2" id="field-2"
+                                                        name="field-2">
+                            <!--<option value="DEPOSIT_REJECTED">DEPOSIT REJECTED</option>-->
+                            <option value="DEPOSIT_ACCEPTED">DEPOSIT ACCEPTED</option>
+                            <!--<option value="FULLYPAID_REJECTED">FULLY PAID REJECTED</option>-->
+                            <option value="FULLYPAID_ACCEPTED">FULLY PAID ACCEPTED</option>
+                        </select></form>
+                    </div>
+                    <button class="edit-customer-button w-button editButton" data-ix="show-editting"
+                            id="{{this.idCustomer}}editButton">EDIT
+                    </button>
+                    <button class="save-customer-button w-button saveButton" data-ix="save-editing" value="{{@index}}"
+                            id="{{this.idCustomer}}saveButton">SAVE
+                    </button>
+                </div>
+                <div class="data-booking-status">
+                    <button class="deposit btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        deposit
+                    </button>
+                    <button class="fullpayment btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        fullpayment
+                    </button>
+                    <button class="tripnote btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        trip note
+                    </button>
+
+                </div>
+                <div class="data-booking-status">
+                    <button class="full btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        full
+                    </button>
+                    <button class="balance btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        balance
+                    </button>
+                    <button class="linkfullpayment btn btn-sm btn-primary" value="{{@index}}" id="{{email}}"
+                            data-ix="show-editting">
+                        Link FullPayment
+                    </button>
+
+                </div>
+
+
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+
+
+
+
+
+
+

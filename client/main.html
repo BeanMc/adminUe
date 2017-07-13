@@ -1,0 +1,123 @@
+<head>
+    <title>leaderboard</title>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX-tK7m826U5GCA50YYxHKPYbYMNqm2eM&callback=initMap"-->
+    <!--type="text/javascript"></script>-->
+    <meta charset="utf-8">
+    <title>ueadmin</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="css/_normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/_webflow.css" rel="stylesheet" type="text/css">
+    <link href="css/ueadmin.webflow.css" rel="stylesheet" type="text/css">
+    <!--<script src="rawJS/ResizeSensor.js"></script>-->
+    <!--<script src="rawJS/ElementQueries.js"></script>-->
+    <link href="/eq.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+            }
+        });
+    </script>
+    <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+
+
+</body>
+
+
+<template name="downloadInfo">
+    <button type="button" class="btn btn-default downloadInfo">downloadInfo
+    </button>
+</template>
+
+
+<template name="showimage">
+
+    {{#if image}}
+        <img class="img-fileUpload-thumbnail img-thumbnail img-rounded" src="/cfs/files/image/{{image}}">
+    {{/if}}
+
+</template>
+
+<template name="dob">
+    {{date}}
+</template>
+
+<template name="showimages">
+    {{#each image}}
+        {{#if this}}
+            <img style="background-color: #1a2226" class="img-fileUpload-thumbnail img-thumbnail img-rounded"
+                 src="/cfs/files/image/{{this}}">
+        {{/if}}
+    {{/each}}
+</template>
+<!--nameCustomers-->
+
+
+<template name="totalday">
+    {{day}}
+</template>
+
+<template name="showdate">
+    {{datetime}}
+</template>
+
+<template name="tourprice">
+    {{price}}
+</template>
+
+<template name="content">
+    {{content}}
+</template>
+
+
+<template name="trip">
+    <p>{{name.tourName}}</p>
+</template>
+
+<template name="customers">
+    {{people}}
+</template>
+
+
+<template name="canceltour">
+    {{#if cancel}}
+        <button type="button" class="btn btn-danger">this tour was END or CANCEL
+        </button>
+    {{else}}
+        {{#if earlybook}}
+
+            <button class=" btn-xs btn-primary myModal" data-toggle="modal" data-target="#myModalReason{{doc._id}}">
+                cancel tour and refund all
+            </button>
+
+            {{#if continueTour}}
+                <button class="btn-xs btn-warning" id="continuetour">send email to deposit for customer</button>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</template>
+
+
+<template name="fullbooked">
+    {{#if cancel}}
+        <button type="button" class="btn btn-danger">this tour was END or CANCEL
+        </button>
+    {{else}}
+        {{#if fullbook}}
+            <button class=" btn-xs btn-primary myModalReasonFull" id="canceltourfull" data-toggle="modal"
+                    data-target="#myModalReasonFull{{doc._id}}">
+                cancel tour and refund all
+            </button>
+            {{#if continueTour}}
+                <button class="btn-xs btn-warning" id="continuetour">Confirm Tour</button>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</template>
+

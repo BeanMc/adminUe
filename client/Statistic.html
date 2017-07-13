@@ -1,0 +1,111 @@
+<template name="statistic">
+    <div class="statistic-table">
+        <div class="table-header">
+            <div class="last-logged-in">Last Logged In: {{timeLogin}}</div>
+
+
+        </div>
+        <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+            <div class="w-tab-menu " >
+                <a class="tab-link w--current w-inline-block w-tab-link" id="recentCustomer" data-w-tab="Tab 1">
+                    <div>Recent Customers</div>
+                </a>
+                <a class="tab-link w-inline-block w-tab-link" id="listCustomerOfWeek" data-w-tab="Tab 3">
+                    <div>List of Customers this week</div>
+                </a>
+                <a class="tab-link w-inline-block w-tab-link" id="newCustomer" data-w-tab="Tab 2">
+                    <div>New customers since last log-in</div>
+                </a>
+                <a class="tab-link w-inline-block w-tab-link" id="customerTour" data-w-tab="Tab 4">
+                    <div>Customers to Tour</div>
+                </a>
+            </div>
+            <div class="w-tab-content">
+                <div class="w--tab-active w-tab-pane" data-w-tab="Tab 1">
+                    <div class="list-wrapper">
+                        <div class="data-row-wrapper header-row">
+                            <div class="data-number">
+                                <div>#</div>
+                            </div>
+                            <div class="data-time">
+                                <div>Time</div>
+                            </div>
+                            <div class="data-name">
+                                <div>First name</div>
+                            </div>
+                            <div class="data-name">
+                                <div>Last name</div>
+                            </div>
+                            <div class="data-phone-passport">
+                                <div>Phone</div>
+                            </div>
+                            <div class="data-phone-passport">
+                                <div>Passport</div>
+                            </div>
+                            <div class="data-email">
+                                <div>Email</div>
+                            </div>
+                            <div class="data-booked-tour">
+                                <div>Booked Tour</div>
+                            </div>
+                            <div class="data-time">
+                                <div>Tour date</div>
+                            </div>
+                            <div class="data-booking-status">
+                                <div>Booking status</div>
+                            </div>
+                            <div class="data-booking-status">
+                                <div>Payment status</div>
+                            </div>
+                        </div>
+
+                        {{#each customer}}
+
+                            <div class="data-row-wrapper" id="{{_id}}">
+                                <div class="data-number">
+                                    <div>{{countCustomers @index}}</div>
+                                </div>
+                                <div class="data-time">
+                                    <div>{{dateCreate this.createdAt}}</div>
+                                </div>
+                                <div class="data-name">
+                                    <div>{{firstName this.idCustomer}}</div>
+                                </div>
+                                <div class="data-name">
+                                    <div>{{lastName this.idCustomer}}</div>
+                                </div>
+                                <div class="data-phone-passport">
+                                    <div>{{myPhone idCustomer}}</div>
+                                </div>
+                                <div class="data-phone-passport">
+                                    <div>{{passport idCustomer}}</div>
+                                </div>
+                                <div class="data-email">
+                                    <div>{{email}}</div>
+                                </div>
+                                <div class="data-booked-tour">
+                                    <div>{{tourName idTour}}</div>
+                                </div>
+                                <div class="data-time">
+                                    <div>{{dateStart}}</div>
+                                </div>
+                                <div class="data-booking-status fullypaid">
+                                    <div>{{payment}}</div>
+                                </div>
+                                <div class="accepted data-booking-status">
+                                    <div>{{paymentStatus}}</div>
+                                </div>
+                            </div>
+
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</template>

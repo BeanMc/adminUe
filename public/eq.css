@@ -1,0 +1,290 @@
+/*!*Trip view*!*/
+/*@element ".content-header a[href^=\/admin\/Trip\/]" {*/
+
+    /*!*CREATED AT*!*/
+    /*form > div:nth-child(1) {*/
+    /*width: 45%;*/
+    /*}*/
+    /*!*CREATED AT*!*/
+
+    /*!*TRIP NAME*!*/
+    /*form > div:nth-child(2) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP NAME*!*/
+
+    /*!*GUIDE*!*/
+    /*form > div:nth-child(3) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*GUIDE*!*/
+
+    /*!*DIFFICULTY*!*/
+    /*form > div:nth-child(4) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*DIFFICULTY*!*/
+
+    /*!*WEATHER*!*/
+    /*form > div:nth-child(5) {*/
+    /*width: 45%;*/
+    /*}*/
+    /*!*WEATHER*!*/
+
+    /*!*LOCATION*!*/
+    /*form > div:nth-child(7) {*/
+    /*width: 45%;*/
+    /*}*/
+    /*!*LOCATION*!*/
+    /**/
+    /*!*PRELUDE*!*/
+    /*form > div:nth-child(9) {*/
+        /*width: 95%;*/
+
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(1) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(2) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(3) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(4) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(5) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > ul > li:nth-child(1) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1)*/
+    /*{*/
+        /*width: 95%*/
+    /*}*/
+    /*!*PRELUDE*!*/
+
+    /*!*DAY PLAN*!*/
+    /*form > div:nth-child(10) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(1) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(2) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(3) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(4) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(5) > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(1) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(1) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(2) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(2) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(3) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(3) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(4) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(4) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(5) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(5) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(6) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(6) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(7) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(7) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(8) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(8) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(9) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(10) > div.panel-body > div > ul > li:nth-child(9) > div > div.autoform-array-item-body > div > div.panel-body > div:nth-child(4) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*!*DAY PLAN*!*/
+
+    /*!*TRIP INCLUSION*!*/
+    /*form > div:nth-child(11) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP INCLUSION*!*/
+
+    /*!*TRIP EXCLUSION*!*/
+    /*form > div:nth-child(12) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP EXNCLUSION*!*/
+
+    /*!*TRIP INCLUSION*!*/
+    /*form > div:nth-child(13) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP INCLUSION*!*/
+
+    /*!*IMPORTANT NOTES*!*/
+    /*form > div:nth-child(35) {*/
+        /*width: 95%;*/
+    /*}*/
+
+    /*!* IMPORTANT NOTES*!*/
+
+/*}*/
+
+/*@element ".content-header a[href^=\/admin\/Tour\/]" {*/
+
+    /*!*CREATED AT*!*/
+    /*form > div:nth-child(1) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*CREATED AT*!*/
+
+    /*!*TRIP NAME*!*/
+    /*form > div:nth-child(2) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP NAME*!*/
+
+    /*!*GUIDE*!*/
+    /*form > div:nth-child(3) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*GUIDE*!*/
+
+    /*!*DIFFICULTY*!*/
+    /*form > div:nth-child(4) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*DIFFICULTY*!*/
+
+    /*!*WEATHER*!*/
+    /*form > div:nth-child(5) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*WEATHER*!*/
+
+    /*!*DEPOSIT PAYABLE IN SGD*!*/
+    /*form > div:nth-child(6) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*DEPOSIT PAYABLE IN SGD*!*/
+
+    /*!*LOCATION*!*/
+    /*form > div:nth-child(7) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*LOCATION*!*/
+
+    /*!*MINIMUM PEOPLE*!*/
+    /*form > div:nth-child(8) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*MINIMUM PEOPLE*!*/
+
+    /*!*TOUR PRICE*!*/
+    /*form > div:nth-child(9) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > div.panel-body > div:nth-child(1) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > div.panel-body > div:nth-child(2) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > div.panel-body > div:nth-child(3) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(9) > div.panel-body > div:nth-child(4) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*!*PRELUDE*!*/
+
+    /*!*MEAL OPTIONS*!*/
+    /*form > div:nth-child(10) {*/
+        /*width: 45%;*/
+    /*}*/
+
+    /*!*MEAL OPTIONS*!*/
+
+
+    /*!*TRIP INCLUSION*!*/
+    /*form > div:nth-child(11) {*/
+        /*width: 45%;*/
+        /*background-color: blue;*/
+    /*}*/
+    /*!*TRIP INCLUSION*!*/
+
+    /*!*FLIGHT DETAILS*!*/
+    /*form > div:nth-child(12) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(12) > div.panel-body > div:nth-child(1) {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(12) > div.panel-body > div:nth-child(2) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*form > div:nth-child(12) > div.panel-body > div:nth-child(3) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*form > div:nth-child(12) > div.panel-body > div:nth-child(2) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+    /*form > div:nth-child(12) > div.panel-body > div:nth-child(3) > ul > li.list-group-item.autoform-array-item > div > div.autoform-array-item-body > div {*/
+        /*width: 95%;*/
+    /*}*/
+
+    /*!*FLIGHT DETAILS*!*/
+
+    /*!*TRIP INCLUSION*!*/
+    /*form > div:nth-child(13) {*/
+        /*width: 45%;*/
+    /*}*/
+    /*!*TRIP INCLUSION*!*/
+
+    /*!*IMPORTANT NOTES*!*/
+    /*form > div:nth-child(35) {*/
+        /*width: 95%;*/
+    /*}*/
+
+    /*!* IMPORTANT NOTES*!*/
+
+/*}*/
+
